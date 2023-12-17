@@ -11,9 +11,9 @@ namespace WinFormsApp1
         public string CharacterName { get; set; }
         public string City {  get; set; }
 
-        public char Vocation { get; set; }
-        public char Sex { get; set; }
-        public int Level { get; set;}
-        public DateTime Created { get; set; }
+        public string Vocation { get; set; }
+        public string Sex { get; set; }
+        public string Level { get; set;}
+        public string ?Created { get; set; }
     }
 }

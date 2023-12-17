@@ -28,61 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CharNameTB = new TextBox();
-            CityTB = new TextBox();
-            VocationTB = new TextBox();
-            SexTB = new TextBox();
-            LevelTB = new TextBox();
-            CreatedTB = new TextBox();
+            txtCharacterName = new TextBox();
+            txtCity = new TextBox();
+            txtVocation = new TextBox();
+            txtSex = new TextBox();
+            txtLevel = new TextBox();
+            txtCreated = new TextBox();
             CharacterNameLabel = new Label();
             CityLaber = new Label();
             VocationLabel = new Label();
             SexLabel = new Label();
             LevelLabel = new Label();
             CreatedLabel = new Label();
+            BtnCreateCharacter = new Button();
             SuspendLayout();
             // 
-            // CharNameTB
+            // txtCharacterName
             // 
-            CharNameTB.Location = new Point(177, 17);
-            CharNameTB.Name = "CharNameTB";
-            CharNameTB.Size = new Size(111, 23);
-            CharNameTB.TabIndex = 0;
+            txtCharacterName.Location = new Point(177, 17);
+            txtCharacterName.Name = "txtCharacterName";
+            txtCharacterName.Size = new Size(111, 23);
+            txtCharacterName.TabIndex = 0;
             // 
-            // CityTB
+            // txtCity
             // 
-            CityTB.Location = new Point(177, 58);
-            CityTB.Name = "CityTB";
-            CityTB.Size = new Size(111, 23);
-            CityTB.TabIndex = 1;
+            txtCity.Location = new Point(177, 58);
+            txtCity.Name = "txtCity";
+            txtCity.Size = new Size(111, 23);
+            txtCity.TabIndex = 1;
             // 
-            // VocationTB
+            // txtVocation
             // 
-            VocationTB.Location = new Point(177, 106);
-            VocationTB.Name = "VocationTB";
-            VocationTB.Size = new Size(111, 23);
-            VocationTB.TabIndex = 2;
+            txtVocation.Location = new Point(177, 106);
+            txtVocation.Name = "txtVocation";
+            txtVocation.Size = new Size(111, 23);
+            txtVocation.TabIndex = 2;
             // 
-            // SexTB
+            // txtSex
             // 
-            SexTB.Location = new Point(177, 168);
-            SexTB.Name = "SexTB";
-            SexTB.Size = new Size(111, 23);
-            SexTB.TabIndex = 3;
+            txtSex.Location = new Point(177, 168);
+            txtSex.Name = "txtSex";
+            txtSex.Size = new Size(111, 23);
+            txtSex.TabIndex = 3;
             // 
-            // LevelTB
+            // txtLevel
             // 
-            LevelTB.Location = new Point(177, 227);
-            LevelTB.Name = "LevelTB";
-            LevelTB.Size = new Size(111, 23);
-            LevelTB.TabIndex = 4;
+            txtLevel.Location = new Point(177, 227);
+            txtLevel.Name = "txtLevel";
+            txtLevel.Size = new Size(111, 23);
+            txtLevel.TabIndex = 4;
             // 
-            // CreatedTB
+            // txtCreated
             // 
-            CreatedTB.Location = new Point(177, 278);
-            CreatedTB.Name = "CreatedTB";
-            CreatedTB.Size = new Size(111, 23);
-            CreatedTB.TabIndex = 5;
+            txtCreated.Location = new Point(177, 278);
+            txtCreated.Name = "txtCreated";
+            txtCreated.Size = new Size(111, 23);
+            txtCreated.TabIndex = 5;
             // 
             // CharacterNameLabel
             // 
@@ -139,42 +140,55 @@
             CreatedLabel.TabIndex = 11;
             CreatedLabel.Text = "Created";
             // 
+            // BtnCreateCharacter
+            // 
+            BtnCreateCharacter.Location = new Point(197, 336);
+            BtnCreateCharacter.Name = "BtnCreateCharacter";
+            BtnCreateCharacter.Size = new Size(75, 23);
+            BtnCreateCharacter.TabIndex = 12;
+            BtnCreateCharacter.Text = "Create";
+            BtnCreateCharacter.UseVisualStyleBackColor = true;
+            BtnCreateCharacter.Click += BtnCreateCharacter_Click;
+            // 
             // CreateAccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(876, 450);
+            Controls.Add(BtnCreateCharacter);
             Controls.Add(CreatedLabel);
             Controls.Add(LevelLabel);
             Controls.Add(SexLabel);
             Controls.Add(VocationLabel);
             Controls.Add(CityLaber);
             Controls.Add(CharacterNameLabel);
-            Controls.Add(CreatedTB);
-            Controls.Add(LevelTB);
-            Controls.Add(SexTB);
-            Controls.Add(VocationTB);
-            Controls.Add(CityTB);
-            Controls.Add(CharNameTB);
+            Controls.Add(txtCreated);
+            Controls.Add(txtLevel);
+            Controls.Add(txtSex);
+            Controls.Add(txtVocation);
+            Controls.Add(txtCity);
+            Controls.Add(txtCharacterName);
             Name = "CreateAccountForm";
             Text = "CreateAccountForm";
+            Load += CreateAccountForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox CharNameTB;
-        private TextBox CityTB;
-        private TextBox VocationTB;
-        private TextBox SexTB;
-        private TextBox LevelTB;
-        private TextBox CreatedTB;
+        private TextBox txtCharacterName;
+        private TextBox txtCity;
+        private TextBox txtVocation;
+        private TextBox txtSex;
+        private TextBox txtLevel;
+        private TextBox txtCreated;
         private Label CharacterNameLabel;
         private Label CityLaber;
         private Label VocationLabel;
         private Label SexLabel;
         private Label LevelLabel;
         private Label CreatedLabel;
+        private Button BtnCreateCharacter;
     }
 }
