@@ -27,7 +27,9 @@ namespace WinFormsApp1
             this.Hide();
         }
 
+        private void Update_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

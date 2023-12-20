@@ -8,12 +8,13 @@ namespace WinFormsApp1
 {
     public class Character
     {
+        public int Id { get; set; }
         public string CharacterName { get; set; }
         public string City {  get; set; }
 
         public string Vocation { get; set; }
         public string Sex { get; set; }
         public string Level { get; set;}
-        public string ?Created { get; set; }
+        public string Created { get; set; }
     }
 }

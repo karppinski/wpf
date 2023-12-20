@@ -60,6 +60,7 @@
             Update.TabIndex = 2;
             Update.Text = "update";
             Update.UseVisualStyleBackColor = true;
+            Update.Click += Update_Click;
             // 
             // Search
             // 

@@ -12,7 +12,7 @@ namespace WinFormsApp1
 {
     public partial class CreateAccountForm : Form
     {
-        private string conn = "Data Source=DESKTOP-P0QENFT\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private string conn = "Data Source=DESKTOP-P0QENFT;Initial Catalog=Characters;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
         private CharacterService characterService;
         public CreateAccountForm()
         {
@@ -39,6 +39,7 @@ namespace WinFormsApp1
                 Vocation = txtVocation.Text,
                 Sex = txtSex.Text,
                 Level = txtLevel.Text,
+                Created = txtCreated.Text
             };
 
             characterService.CreateCharacter(newCharacter);
