@@ -60,6 +60,7 @@
             Search.TabIndex = 3;
             Search.Text = "search";
             Search.UseVisualStyleBackColor = true;
+            Search.Click += Search_Click;
             // 
             // Change
             // 

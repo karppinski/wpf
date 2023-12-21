@@ -29,5 +29,9 @@ namespace WinFormsApp1
         {
             return repository.GetCharacterById(id);
         }
+        public List<Character> GetAllCharacters()
+        {
+            return repository.GetAllCharacters();
+        }
     }
 }

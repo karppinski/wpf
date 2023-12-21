@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,6 +94,42 @@ namespace WinFormsApp1
             return null;
 
         }
+        public List<Character> GetAllCharacters()
+        {
+            List<Character> characters = new List<Character>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT * FROM CharactersList";
+                {
+                    using (SqlCommand cmd = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Character character = new Character
+                                {
+                                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                    CharacterName = reader.GetString(reader.GetOrdinal("CharacterName")),
+                                    City = reader.GetString(reader.GetOrdinal("City")),
+                                    Vocation = reader.GetString(reader.GetOrdinal("Vocation")),
+                                    Sex = reader.GetString(reader.GetOrdinal("Sex")),
+                                    Level = reader.GetString(reader.GetOrdinal("Level")),
+                                    Created = reader.GetString(reader.GetOrdinal("Created")),
+                                };
+                                characters.Add(character);
+                            }
+                        }
+
+                    }
+                }
+
+                return characters;
+            }
+        }
+
        public void UpdateCharacter(Character character)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -130,3 +167,4 @@ namespace WinFormsApp1
         }
     }
 }
+        

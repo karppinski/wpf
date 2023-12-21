@@ -10,7 +10,7 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
-            characterService = new CharacterService(conn); 
+            characterService = new CharacterService(conn);
 
         }
 
@@ -41,10 +41,10 @@ namespace WinFormsApp1
 
             string input = Microsoft.VisualBasic.Interaction.InputBox("Enter the ID of the character to update", "Update Character", "1", -1, -1);
 
-            if(int.TryParse(input, out int characterId))
+            if (int.TryParse(input, out int characterId))
             {
                 Character characterToUpdate = characterService.GetCharacterById(characterId);
-                if(characterToUpdate != null)
+                if (characterToUpdate != null)
                 {
                     UpdateAccountForm updateAccountForm = new UpdateAccountForm(characterToUpdate);
                     updateAccountForm.Show();
@@ -59,9 +59,16 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Invalid ID entered.");
             }
-            
-            
 
+
+
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            BrowseAccountForm browseAccountForm = new BrowseAccountForm();
+            browseAccountForm.Show();
+            this.Hide();
         }
     }
 }
