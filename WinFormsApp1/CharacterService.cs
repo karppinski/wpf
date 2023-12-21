@@ -33,5 +33,10 @@ namespace WinFormsApp1
         {
             return repository.GetAllCharacters();
         }
+
+        public void DeleteCharacter(int id)
+        {
+             repository.DeleteCharacter(id);
+        }
     }
 }

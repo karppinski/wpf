@@ -129,6 +129,21 @@ namespace WinFormsApp1
                 return characters;
             }
         }
+       public void DeleteCharacter(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+           
+                string sql = "DELETE FROM CharactersList WHERE Id = @Id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
        public void UpdateCharacter(Character character)
         {

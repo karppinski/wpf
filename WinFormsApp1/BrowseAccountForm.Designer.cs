@@ -42,6 +42,7 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
+            DeletBtn = new Button();
             SuspendLayout();
             // 
             // CharacterNameLabel
@@ -173,11 +174,22 @@
             label12.Text = "Created";
             label12.Click += label12_Click;
             // 
+            // DeletBtn
+            // 
+            DeletBtn.Location = new Point(667, 329);
+            DeletBtn.Name = "DeletBtn";
+            DeletBtn.Size = new Size(75, 23);
+            DeletBtn.TabIndex = 14;
+            DeletBtn.Text = "Delete";
+            DeletBtn.UseVisualStyleBackColor = true;
+            DeletBtn.Click += DeletBtn_Click;
+            // 
             // BrowseAccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(DeletBtn);
             Controls.Add(BtnNext);
             Controls.Add(button1);
             Controls.Add(label12);
@@ -215,5 +227,6 @@
         private Label label10;
         private Label label11;
         private Label label12;
+        private Button DeletBtn;
     }
 }

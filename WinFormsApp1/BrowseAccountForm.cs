@@ -68,5 +68,26 @@ namespace WinFormsApp1
                 DisplayCurrentCharacter();
             }
         }
+
+        private void DeletBtn_Click(object sender, EventArgs e)
+        {
+            if(characters.Count > 0 && currentIndex < characters.Count)
+            {
+                var result = MessageBox.Show("Are you sure ?", "Confirm delete", MessageBoxButtons.YesNo);
+
+                if (result  == DialogResult.Yes)
+                {
+                    int characteIdToDelete = characters[currentIndex].Id;
+                    characterService.DeleteCharacter(characteIdToDelete);
+
+                    LoadCharacters();
+                }
+
+                DisplayCurrentCharacter();
+
+                MessageBox.Show("Deletion Complete !@!");
+
+            }
+        }
     }
 }
