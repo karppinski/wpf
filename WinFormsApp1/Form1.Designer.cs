@@ -29,8 +29,8 @@
         {
             Create = new Button();
             Delete = new Button();
-            Update = new Button();
             Search = new Button();
+            Change = new Button();
             SuspendLayout();
             // 
             // Create
@@ -52,16 +52,6 @@
             Delete.Text = "Delete";
             Delete.UseVisualStyleBackColor = true;
             // 
-            // Update
-            // 
-            Update.Location = new Point(372, 131);
-            Update.Name = "Update";
-            Update.Size = new Size(75, 23);
-            Update.TabIndex = 2;
-            Update.Text = "update";
-            Update.UseVisualStyleBackColor = true;
-            Update.Click += Update_Click;
-            // 
             // Search
             // 
             Search.Location = new Point(233, 131);
@@ -71,13 +61,23 @@
             Search.Text = "search";
             Search.UseVisualStyleBackColor = true;
             // 
+            // Change
+            // 
+            Change.Location = new Point(373, 131);
+            Change.Name = "Change";
+            Change.Size = new Size(75, 23);
+            Change.TabIndex = 4;
+            Change.Text = "Change";
+            Change.UseVisualStyleBackColor = true;
+            Change.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 372);
+            Controls.Add(Change);
             Controls.Add(Search);
-            Controls.Add(Update);
             Controls.Add(Delete);
             Controls.Add(Create);
             Name = "Form1";
@@ -90,7 +90,7 @@
 
         private Button Create;
         private Button Delete;
-        private Button Update;
         private Button Search;
+        private Button Change;
     }
 }

@@ -20,5 +20,14 @@ namespace WinFormsApp1
         {
             repository.InsertCharacter(character);
         }
+
+        public void UpdateCharacter(Character character)
+        {
+            repository.UpdateCharacter(character);
+        }
+        public Character GetCharacterById(int id)
+        {
+            return repository.GetCharacterById(id);
+        }
     }
 }
